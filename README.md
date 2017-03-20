@@ -1,6 +1,4 @@
 # GAF-Website
-The website for the particularly disfunctional GAF group
+The website for the particularly disfunctional GAF group, found at http://www.neverendinggaf.com
 
-http://gaf.dinitride.win
-
-I'm too poor to buy us our own domain alright
+Written and maintained by the Glorious Leader, DiNitride
