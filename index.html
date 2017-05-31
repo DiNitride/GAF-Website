@@ -3,62 +3,62 @@
 <head>
     <title>Never Ending GAF</title>
     <meta charset="utf-8">
+    <meta name="description" content="The Never Ending GAF">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="Author" content="DiNitride">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
     <link rel="stylesheet" href="CSS/main.css">
     <link rel="icon" href="Graphics/favicon.ico" type="image/x-icon" />
-    <script src="http://www.w3schools.com/lib/w3data.js"></script>
-
 </head>
 <body>
-    
     <div class="jumbotron">
         <img src="Graphics/gaf-logo.jpg" class="img-circle" alt="GAF Logo" width="150" height="150">
         <h1 id="gaf" align="center">The Never Ending GAF</h1>
     </div>
-    
     <div class="container" id="maincontent">
-        
         <div class="row">
-            <div class="col-md-3"></div>
-            
-            <div class="col-md-6">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="btn-group btn-group-justified hidden-xs">
+                    <a href="http://discord.neverendinggaf.com" class="btn btn-default">Discord</a>
+                    <a href="http://steamcommunity.com/groups/TheNeverEndingGAF" class="btn btn-default">Steam</a>
+                    <a href="http://steamcommunity.com/groups/publicgaf" class="btn btn-default">Public Steam</a>
+                    <a href="ts3server://ts.neverendinggaf.com" class="btn btn-default">Backup Teamspeak</a>
+                </div>
+                <button type="button" data-toggle="collapse" data-target="#links" class="btn btn-default btn-block visible-xs">Links</button>
                 
-                <div class="btn-group btn-group-justified">
-                    <a href="http://discord.neverendinggaf.com" class="btn btn-primary">Discord</a>
-                    <a href="http://steamcommunity.com/groups/TheNeverEndingGAF" class="btn btn-primary">Steam</a>
+                <div id="links" class="collapse">
+                    <div class="btn-group-vertical" style="width: 100%">
+                        <a href="http://discord.neverendinggaf.com" class="btn btn-default btn-block">Discord</a>
+                        <a href="http://steamcommunity.com/groups/TheNeverEndingGAF" class="btn btn-default">Steam</a>
+                        <a href="http://steamcommunity.com/groups/publicgaf" class="btn btn-default">Public Steam</a>
+                        <a href="ts3server://ts.neverendinggaf.com" class="btn btn-default">Backup Teamspeak</a>
+                    </div>
                 </div>
                 <br>
-                
                 <p>
                     The Never Ending GAF is a small group of idiots that play games and insult each other. We reside on our Discord server, usually in the beloved cesspool intelligently titled "Channel 1". Feel free to pop by, probably get told to piss off, and maybe play some games.
                 </p>
-                
-                <h3>How do I join GAF?</h3>
+                <h3 data-toggle="tooltip" data-placement="left" title="no, fuck off">Can I join GAF?</h3>
                 <p>
                     Short answer: <b>No</b><br>
                     Long answer: <b>No, fuck off</b><br>
                 </p>
                 <p>
                     GAF is not recruiting in the sense that you can apply and join, we don't do that. We're not an organised clan or group of any sorts, membership is based simply on <strike>how much you please the emperor</strike> who we feel like. If you want to come and hang out with us, join the Discord server. Everyone who's ever been in GAF started there and that's how it will always be done.
-                </p>           
+                </p>
             </div>
-            
-            <div class="col-md-3"></div>
+            <div class="col-md-2"></div>
         </div>
-
         <div class="row">
-            <div class="col-lg-3"></div>
-            <div class="col-lg-6">
-
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8">
                     <h1 align=center>The idiots of the group</h1>
                     <p>Please note this is most likely not accurate because I'm lazy</p>
- 
                 <table id="members" class="table">
-
                     <tbody>
                         <tr>
                             <td><a href="http://steamcommunity.com/id/DiNitride/">DiNitride</a></td>
@@ -97,15 +97,23 @@
                             <td>"Lars, you probably can't even spell DDOS", "Yeah I can, D, E.. wait no"</td>
                         </tr>
                         <tr>
+                            <td><a href="http://steamcommunity.com/profiles/76561198070079658/">Rust</a></td>
+                            <td>Rust is a systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety.</td>
+                        </tr>
+                        <tr>
                             <td><a href="http://steamcommunity.com/id/pawelostr/">Tactical Bucket Hat</a></td>
                             <td>AFK Semi-permanently doing exams</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <div class="col-lg-3"></div>
+            <div class="col-lg-2"></div>
         </div>
     </div>
-
+    <script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip(); 
+    });
+    </script>
 </body>
 </html>
