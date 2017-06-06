@@ -29,6 +29,13 @@ body {
     background: #252525;
 }
 
+.carousel-control.left, .carousel-control.right {
+    background-image: none
+}
+
+.carousel {
+    background: #252525
+}
 
 .btn-default:link {
     color: black;
