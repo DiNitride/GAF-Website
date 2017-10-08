@@ -22,7 +22,8 @@
     </div>
     <div class="container" id="maincontent">
         <div class="row">
-            <div class="col-md-2"></div>
+            <div class="col-md-2">
+            </div>
             <div class="col-md-8">
                 <div class="btn-group btn-group-justified hidden-xs">
                     <a href="http://discord.neverendinggaf.com" class="btn btn-default">Discord</a>
@@ -41,6 +42,7 @@
                     </div>
                 </div>
                 <br>
+                <p><b>Idiots Online: <span class="badge" id="memberCount"></span></b><br><b>Connected to Voice Chat: <span class="badge" id="voiceCount"></span></b></p>
                 <p>
                     The Never Ending GAF is a small group of idiots that play games and insult each other. We reside on our Discord server, usually in the beloved cesspool intelligently titled "Channel 1". Feel free to pop by, probably get told to piss off, and maybe play some games.
                 </p>
@@ -52,12 +54,7 @@
                 <p>
                     GAF is not recruiting in the sense that you can apply and join, we don't do that. We're not an organised clan or group of any sorts, membership is based simply on <strike>how much you please the emperor</strike> who we feel like. If you want to come and hang out with us, join the Discord server. Everyone who's ever been in GAF started there and that's how it will always be done.
                 </p>
-            </div>
-            <div class="col-md-2"></div>
-        </div>
-        <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
+                
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -91,6 +88,15 @@
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
+                
+            </div>
+            <div class="col-md-2">
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
             </div>
             <div class="col-md-2"></div>
         </div>
@@ -160,9 +166,28 @@
         </div>
     </div>
     <script>
-    $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip(); 
-    });
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip(); 
+        });
+
+        let url = 'https://canary.discordapp.com/api/guilds/172425299559055381/widget.json';
+
+        fetch(url)
+        .then(res => res.json())
+        .then((out) => {
+            inVoice = 0;
+            console.log(out);
+            document.getElementById("memberCount").innerHTML = out["members"].length;
+            for (i = 0; i < out["members"].length; i++) {
+                if ("channel_id" in out["members"][i]) {
+                    inVoice += 1;
+                }
+            }
+            document.getElementById("voiceCount").innerHTML = inVoice;
+        })
+        .catch(err => { throw err });
+
+        
     </script>
 </body>
 </html>
