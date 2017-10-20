@@ -1,6 +1,4 @@
-# GAF-Website
-The website for the particularly disfunctional GAF group, found at http://www.neverendinggaf.com
+## GAF-Website
+# Now officially a vintage repo!
 
-![GAF](http://www.neverendinggaf.com/graphics/logos/gaf-logo.jpg)
-
-Badly maintained by DiNitride
+The new version is now being developed and maintained over at https://github.com/TheNeverEndingGAF/web
